@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.container{
+    width: 94%;
+    margin: 0 auto;
+}
+
+/* -----------nanbar------------- */
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:  20px 30px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3) ;
+    letter-spacing: 4px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+.nav-menu{
+    font-size: 25px;
+    display: none !important;
+    cursor: pointer;
+}
+nav .nav-left a{
+    padding: 10px;
+    transition: .5s;
+}
+nav .nav-left a span{
+    margin-right: 10px;
+    font-weight:bold ;
+}
+nav .nav-left a:hover{
+    background-color: #ccc;
+}
+nav .nav-right ul{
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    list-style: none;
+}
+nav .nav-right ul a{
+    padding: 10px 15px;
+    transition: .5s;
+}
+nav .nav-right ul a:hover{
+    background-color: #ccc;
+}
+
+/* -----------header------------- */
+
+header{
+    background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+header div{
+    position: absolute;
+    top: 58%;
+    left: 40%;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+header div span{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #000;
+    opacity: .7;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* -----------Projects Section------------- */
+
+.projects{
+    margin: 70px auto;
+}
+.projects p{
+    /* margin-bottom: 15px; */
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+hr{
+    margin: 20px 0 35px 0;
+    color: #ccc;
+    opacity: .3;
+}
+.projects .projects-houses{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.projects .projects-houses .project-houses-house{
+    width: 24%;
+    position: relative;
+}
+.projects .projects-houses .project-houses-house img{
+    width: 100%;
+}
+.projects .projects-houses .project-houses-house p{
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;letter-spacing: 1px;
+}
+
+/* -----------About Section------------- */
+
+.about h1{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 360;
+}
+.about hr{
+    margin-bottom: 25px;
+}
+.about p{
+    letter-spacing: 1px;
+}
+.about-chars{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 50px 0 70PX 0;
+}
+.about-chars-char{
+    width: 24%;
+}
+.about-chars-char img{
+    width: 100%;
+}
+.about-chars-char h2{
+    font-size: 25px;
+    font-weight: 350;
+    letter-spacing: 1px;
+}
+.about-chars-char h4{
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(85, 85, 85);
+    margin: 10px 0;
+}
+.about-chars-char p{
+    letter-spacing: 1px;
+    font-weight: 370;
+}
+.about-chars-char button{
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    transition: .5s;
+}
+.about-chars-char button:hover{
+    background-color: #ccc;
+}
+
+/* -----------Contact Section------------- */
+
+.contact h1{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 360;
+}
+.contact hr{
+    margin-bottom: 25px;
+}
+.contact p{
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact form input{
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+.contact form input::placeholder{
+    letter-spacing: 1px;
+}
+.contact form button{
+   background-color: #000; 
+   border: none;
+   padding: 10px;
+   width: max-content;
+   color: white;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   cursor: pointer;
+   margin-bottom: 50px;
+}
+.contact form button:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* -----------map Section------------- */
+
+.map img{
+    width: 100%;
+}
+
+/* -----------footer Section------------- */
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+footer p{
+    color: white;
+}
+footer p a{
+    color: white;
+    text-decoration: underline;
+}
+footer p a:hover{
+    color: green;
+}
+
+/* -----------Media Quiry------------- */
+
+@media screen and (max-width:480px) {
+    .container{
+        width: 91%;
+    }
+    nav{
+        padding:  10px 10px;
+    }
+    .nav-menu{
+        display: block !important;
+    }
+    nav .nav-right{
+        display: none;
+    }
+    header div{
+        left: 20%;
+    }
+    .projects .projects-houses{
+        flex-direction: column;
+    }
+    .projects .projects-houses .project-houses-house{
+        width: 100%;
+    }
+    .about-chars{
+        flex-wrap: wrap;
+    }
+    .about-chars-char{
+        width: 45%;
+    }
+}
+@media screen and (min-width:481px) and (max-width:768px) {
+    .container{
+        width: 92%;
+    }
+    nav{
+        padding:  10px 22px;
+    }
+    .nav-menu{
+        display: block !important;
+    }
+    nav .nav-right{
+        display: none;
+    }
+    
+    header div{
+        left: 20%;
+    }
+    .projects .projects-houses{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .projects .projects-houses .project-houses-house{
+        width: 45%;
+    }
+    .about-chars{
+        flex-wrap: wrap;
+    }
+    .about-chars-char{
+        width: 45%;
+    }
+}
